@@ -2,7 +2,7 @@
 
 An app created with **React**, **TypeScript**, and **Vite** to get random post title.
 
-**Deploy**: [https://peppy-trifle-968999.netlify.app/](https://peppy-trifle-968999.netlify.app/)
+**Deploy**: [https://inquisitive-seahorse-466bb6.netlify.app/](https://inquisitive-seahorse-466bb6.netlify.app/)
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@ An app created with **React**, **TypeScript**, and **Vite** to get random post t
 
 ## General Info
 
-This project is a simple search application where users can search for getting random post title from api.
+This project is a simple application where users can get random post title from api.
 
 ## Technologies
 
@@ -35,8 +35,8 @@ The project is created with:
 To run this project, download and install it locally using npm:
 
 ```
-$ git clone https://github.com/Anna1719/search-page.git
-$ cd ./search-page
+$ git clone https://github.com/Anna1719/fuse8-project.git
+$ cd ./fuse8-project
 $ npm install
 $ npm start
 ```
