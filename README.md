@@ -1,2 +1,1 @@
-# Fuse8-Project
- 
+# React + TypeScript + Vite
