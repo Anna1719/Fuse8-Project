@@ -1,31 +1,31 @@
 .randomPost {
   padding: 2rem;
   text-align: center;
+}
 
-  &__title{
-    font-size: 50px;
-  }
+.randomPost__title {
+  font-size: 50px;
+}
 
-  &__button {
-    margin-top: 10px;
-    padding: 20px 35px;
-    border: 2px solid var(--black);
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 22px;
-  }
+.randomPost__button {
+  margin-top: 10px;
+  padding: 20px 35px;
+  border: 2px solid var(--black);
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 22px;
+}
 
-  &__loading{
-    font-size: 24px;
-    color: var(--green);
-  }
+.randomPost__loading {
+  font-size: 24px;
+  color: var(--green);
+}
 
-  &__text{
-    font-size: 24px;
-  }
+.randomPost__text {
+  font-size: 24px;
+}
 
-  &__error{
-    font-size: 24px;
-    color: var(--red);
-  }
+.randomPost__error {
+  font-size: 24px;
+  color: var(--red);
 }

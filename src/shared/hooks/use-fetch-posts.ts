@@ -4,7 +4,7 @@ import { Post } from '@/utils/types';
 
 export const fetchPosts = async (): Promise<Post[]> => {
   try {
-    const response = await apiClient.get<Post[]>('');
+    const response = await apiClient.get<Post[]>('posts');
     return response.data;
   } catch (error) {
     console.error('Failed to fetch posts', error);
