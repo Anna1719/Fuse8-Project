@@ -1,8 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { ROUTES } from '@/shared/services/routes';
 import { MainLayout } from '@/layouts';
-import { Home } from '@/pages/home';
-import { RandomPost } from '@/pages/random-post';
+import { HomePage, RandomPostPage, LandingPage } from '@/pages';
 
 export const routes = [
   {
@@ -10,18 +9,22 @@ export const routes = [
     element: <MainLayout />,
     children: [
       {
-        element: <Home />,
+        element: <HomePage />,
         index: true,
       },
       {
         path: ROUTES.POST.getLink(),
-        element: <RandomPost />,
+        element: <RandomPostPage />,
       },
       {
         path: '*',
         element: <div>404 Not Found</div>,
       },
     ],
+  },
+  {
+    path: ROUTES.LANDING.getLink(),
+    element: <LandingPage />,
   },
 ];
 

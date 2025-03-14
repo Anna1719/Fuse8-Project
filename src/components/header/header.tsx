@@ -12,6 +12,12 @@ export const Header = () => {
         <NavLink to={ROUTES.POST.getLink()} className={styles.header__linkItem}>
           Рандомный Пост
         </NavLink>
+        <NavLink
+          to={ROUTES.LANDING.getLink()}
+          className={styles.header__linkItem}
+        >
+          Лендинг
+        </NavLink>
       </nav>
     </header>
   );

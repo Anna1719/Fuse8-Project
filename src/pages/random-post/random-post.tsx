@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './random-post.module.scss';
 import { useFetchPosts } from '@/shared/hooks/use-fetch-posts';
 
-export const RandomPost = () => {
+export const RandomPostPage = () => {
   const { posts, error } = useFetchPosts();
   const [postTitle, setPostTitle] = useState<string>('');
 
