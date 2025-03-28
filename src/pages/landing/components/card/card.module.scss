@@ -8,6 +8,9 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px var(--shadow-color);
   font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out,
+              border 0.3s ease-in-out,
+              box-shadow 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.08);
