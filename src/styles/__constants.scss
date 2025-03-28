@@ -1,10 +1,14 @@
 :root {
-  --green: #267504;
-  --red: #aa1010;
-  --blue: #091263;
-  --black: #1d1929;
-  --grey:#767676;
-  --white: #ffffff;
-  --violet: #656EC2;
-  --shadow:  #64646F33;
+  --loading-color: #267504;
+  --error-color: #aa1010;
+  --links-color: #091263;
+  --base-text-color: #1d1929;
+  --base-title-color: #131832;
+  --focus-color: #2c4592;
+  --background-dark:#e0e0e0;
+  --background-light: #ffffff;
+  --shadow-color:  #64646F33;
+  --border-base-color:  #232324d6;
+  --button-base-color: #0048ff;
+  --button-hover-color:#0252a7;
 }

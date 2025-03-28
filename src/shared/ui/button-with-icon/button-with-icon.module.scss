@@ -1,0 +1,24 @@
+@use "@/styles/__media" as *;
+
+.buttonWithIcon {
+  padding: 18px 24px;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: var(--background-light);
+  cursor: pointer;
+  background-color: var(--button-base-color);
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &:hover {
+    background-color: var(--button-hover-color);
+    box-shadow: 0 6px 8px var(--shadow-color);
+  }
+
+  @include media-breakpoint(sm) {
+    width: 100%;
+    justify-content: center;
+  }
+}

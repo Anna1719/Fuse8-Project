@@ -1,0 +1,100 @@
+@use '@/styles/__media' as *;
+
+.landing {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.landingSection {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-light);
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+
+  &:nth-child(odd) {
+    background-color: var(--background-dark);
+  }
+
+  @include media-breakpoint(sm) {
+    height: auto;
+    padding: 40px 20px;
+  }
+}
+
+.sectionTitle {
+  font-size: 50px;
+  color: var(--base-title-color);
+}
+
+.sectionText {
+  font-size: 30px;
+  color: var(--base-text-color);
+}
+
+.cardsContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+
+  @include media-breakpoint(md) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.alarmInput {
+  min-width: 250px;
+  padding: 20px;
+  border: 1px solid var(--border-base-color);
+
+  &:focus {
+    border: 3px solid var(--focus-color);
+    box-shadow: 0 0 8px var(--focus-color);
+  }
+
+  @include media-breakpoint(sm) {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+.homeIcon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: var(--focus-color);
+  padding: 8px;
+  min-width: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px var(--shadow-color);
+
+  &:hover {
+    opacity: 1;
+  }
+}

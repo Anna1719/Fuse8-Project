@@ -7,4 +7,8 @@ export const ROUTES = {
     getLink: () => `/random-post`,
     pathname: '/random-post',
   },
+  LANDING: {
+    getLink: () => `/landing`,
+    pathname: '/landing',
+  },
 };

@@ -1,1 +1,1 @@
-export { RandomPost } from './random-post';
+export { RandomPostPage } from './random-post';
