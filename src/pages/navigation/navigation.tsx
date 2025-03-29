@@ -65,13 +65,11 @@ export const Navigation = () => {
       <div className={styles.navigation}>
         <h2 className={styles.navigation__header}>Меню навигации</h2>
 
-        {isLoading ? (
+        {isLoading && (
           <div className={styles.loading}>Loading navigation...</div>
-        ) : error ? (
-          <div className={styles.error}>{error}</div>
-        ) : (
-          renderNavigationItems(filteredNav)
         )}
+        {error && <div className={styles.error}>{error}</div>}
+        {!isLoading && !error && renderNavigationItems(filteredNav)}
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ export const LandingPage = () => {
 
   return (
     <div className={styles.landing}>
-      <h1 className={styles.visuallyHidden}></h1>
+      <h1 className={styles.visuallyHidden}>Страница лендинга</h1>
       <section className={styles.landingSection}>
         <h2 className={styles.sectionTitle}>
           Интересные факты про эту страницу
