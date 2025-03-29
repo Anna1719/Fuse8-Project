@@ -17,6 +17,10 @@ export const routes = [
         element: <RandomPostPage />,
       },
       {
+        path: ROUTES.LANDING.getLink(),
+        element: <LandingPage />,
+      },
+      {
         path: ROUTES.NAVIGATION.getLink(),
         element: <Navigation />,
       },
@@ -25,10 +29,6 @@ export const routes = [
         element: <div>Page is empty</div>,
       },
     ],
-  },
-  {
-    path: ROUTES.LANDING.getLink(),
-    element: <LandingPage />,
   },
 ];
 

@@ -5,6 +5,7 @@
   margin: 0;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
+  width: 100%;
 }
 
 .visuallyHidden {
@@ -75,26 +76,5 @@
   @include media-breakpoint(sm) {
     width: 100%;
     padding: 15px;
-  }
-}
-
-.homeIcon {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  color: var(--focus-color);
-  padding: 8px;
-  min-width: 42px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 4px var(--shadow-color);
-
-  &:hover {
-    opacity: 1;
   }
 }

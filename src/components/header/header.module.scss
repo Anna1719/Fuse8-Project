@@ -23,6 +23,13 @@
   @include media-breakpoint(md) {
     display: block;
   }
+
+  &.alwaysVisible {
+    display: block !important;
+    position: fixed;
+    right: 20px;
+    left: auto;
+  }
 }
 
 .burger__icon {
@@ -59,7 +66,7 @@
 .header__linkItem {
   color: var(--base-text-color);
   text-decoration: none;
-  font-size: 24px;
+  font-size: 34px;
   padding: 0 20px;
   transition: color 0.2s;
 
@@ -79,12 +86,12 @@
   }
 
   @include media-breakpoint(lg) {
-    font-size: 20px;
+    font-size: 26px;
     padding: 0 15px;
   }
 
   @include media-breakpoint(md) {
-    font-size: 18px;
+    font-size: 20px;
     padding: 10px 0;
     margin: 5px 0;
   }
