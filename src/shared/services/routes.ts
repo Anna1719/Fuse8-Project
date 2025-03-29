@@ -1,14 +1,28 @@
+import { Route } from '@/utils/navigation-types';
+
 export const ROUTES = {
   MAIN: {
-    getLink: () => '/',
+    name: 'main',
     pathname: '/',
+    getLink: () => '/',
+    text: 'Главная',
   },
   POST: {
-    getLink: () => `/random-post`,
+    name: 'post',
     pathname: '/random-post',
+    getLink: () => '/random-post',
+    text: 'Рандомный пост',
   },
   LANDING: {
-    getLink: () => `/landing`,
+    name: 'landing',
     pathname: '/landing',
+    getLink: () => '/landing',
+    text: 'Лендинг',
   },
-};
+  NAVIGATION: {
+    name: 'navigation',
+    pathname: '/navigation',
+    getLink: () => '/navigation',
+    text: 'Навигация',
+  },
+} satisfies Record<string, Route>;
