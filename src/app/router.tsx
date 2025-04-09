@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { ROUTES } from '@/shared/services/routes';
 import { MainLayout } from '@/layouts';
-import { HomePage, RandomPostPage, LandingPage, Navigation } from '@/pages';
+import { HomePage, RandomPostPage, LandingPage, NavigationPage } from '@/pages';
 
 export const routes = [
   {
@@ -22,7 +22,7 @@ export const routes = [
       },
       {
         path: ROUTES.NAVIGATION.getLink(),
-        element: <Navigation />,
+        element: <NavigationPage />,
       },
       {
         path: '*',

@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
+import cn from 'classnames';
 import styles from './navigation.module.scss';
 import { NavigationList } from '@/utils/navigation-types';
 import { generateNavigationListWithPermissions } from './features/generate-navigation-with-permission';
 import { checkHasUserPermission, navigationList } from './model';
 import { NavLink } from 'react-router-dom';
 
-export const Navigation = () => {
+export const NavigationPage = () => {
   const [filteredNav, setFilteredNav] = useState<NavigationList>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -45,9 +46,9 @@ export const Navigation = () => {
                   key={route.name}
                   to={route.getLink()}
                   className={({ isActive }) =>
-                    isActive
-                      ? `${styles.navigation__link} ${styles.active}`
-                      : styles.navigation__link
+                    cn(styles.navigation__link, {
+                      [styles.active]: isActive,
+                    })
                   }
                 >
                   {route.text}
@@ -75,4 +76,4 @@ export const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default NavigationPage;
