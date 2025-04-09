@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './random-post.module.scss';
-import { useFetchPosts } from '@/shared/hooks/use-fetch-posts';
+import { useFetchPosts } from '@/shared/hooks/posts/use-fetch-posts';
 
 export const RandomPostPage = () => {
   const { posts, error } = useFetchPosts();

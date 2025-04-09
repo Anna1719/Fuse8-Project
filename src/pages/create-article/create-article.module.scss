@@ -1,0 +1,25 @@
+.container {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.title {
+  color: var(--base-title-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.backButton {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--links-color);
+  text-decoration: none;
+  background-color: var(--background-light);
+  border: 2px solid var(--button-base-color);
+
+  &:hover {
+    text-decoration: underline;
+    background-color: var(--background-light);
+    border-color: var(--button-hover-color);
+  }
+}
