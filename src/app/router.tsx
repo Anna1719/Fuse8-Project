@@ -1,7 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { ROUTES } from '@/shared/services/routes';
 import { MainLayout } from '@/layouts';
-import { HomePage, RandomPostPage, LandingPage, NavigationPage } from '@/pages';
+import {
+  HomePage,
+  RandomPostPage,
+  LandingPage,
+  NavigationPage,
+  ArticleListPage,
+  CreateArticlePage,
+} from '@/pages';
 
 export const routes = [
   {
@@ -23,6 +30,14 @@ export const routes = [
       {
         path: ROUTES.NAVIGATION.getLink(),
         element: <NavigationPage />,
+      },
+      {
+        path: ROUTES.ARTICLES.getLink(),
+        element: <ArticleListPage />,
+      },
+      {
+        path: ROUTES.CREATE_ARTICLE.getLink(),
+        element: <CreateArticlePage />,
       },
       {
         path: '*',

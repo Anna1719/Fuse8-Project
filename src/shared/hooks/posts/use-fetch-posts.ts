@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { apiClient } from '../services/request';
+import { apiClient } from '@/shared/services/request';
 import { Post } from '@/utils/post-types';
 
 export const fetchPosts = async (): Promise<Post[]> => {

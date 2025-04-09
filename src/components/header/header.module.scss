@@ -66,7 +66,7 @@
 .header__linkItem {
   color: var(--base-text-color);
   text-decoration: none;
-  font-size: 34px;
+  font-size: 30px;
   padding: 0 20px;
   transition: color 0.2s;
 
@@ -86,12 +86,12 @@
   }
 
   @include media-breakpoint(lg) {
-    font-size: 26px;
+    font-size: 24px;
     padding: 0 15px;
   }
 
   @include media-breakpoint(md) {
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px 0;
     margin: 5px 0;
   }

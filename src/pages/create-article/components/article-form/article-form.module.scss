@@ -1,0 +1,61 @@
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  & > div {
+    margin-bottom: 16px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--base-text-color);
+    font-weight: 500;
+  }
+
+  input[type='text'],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-base-color);
+    border-radius: 4px;
+    background-color: var(--background-light);
+    font-size: 1rem;
+
+    &:focus {
+      outline: 2px solid var(--focus-color);
+      outline-offset: 2px;
+    }
+  }
+
+  textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+
+  .error {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: 4px;
+  }
+
+  .checkboxContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+
+    input[type='checkbox'] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--button-base-color);
+    }
+  }
+
+  .submitButton {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
