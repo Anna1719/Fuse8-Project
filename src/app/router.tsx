@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { ROUTES } from '@/shared/services/routes';
 import { MainLayout } from '@/layouts';
-import { HomePage, RandomPostPage, LandingPage } from '@/pages';
+import { HomePage, RandomPostPage, LandingPage, NavigationPage } from '@/pages';
 
 export const routes = [
   {
@@ -17,14 +17,18 @@ export const routes = [
         element: <RandomPostPage />,
       },
       {
+        path: ROUTES.LANDING.getLink(),
+        element: <LandingPage />,
+      },
+      {
+        path: ROUTES.NAVIGATION.getLink(),
+        element: <NavigationPage />,
+      },
+      {
         path: '*',
-        element: <div>404 Not Found</div>,
+        element: <div>Page is empty</div>,
       },
     ],
-  },
-  {
-    path: ROUTES.LANDING.getLink(),
-    element: <LandingPage />,
   },
 ];
 

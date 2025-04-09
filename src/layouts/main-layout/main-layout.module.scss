@@ -5,7 +5,7 @@
 .outlet {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 350px);
+  min-height: calc(100vh - 350px);
   justify-content: center;
   align-items: center;
   margin: 128px 100px 80px;

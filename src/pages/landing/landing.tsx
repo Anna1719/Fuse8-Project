@@ -2,9 +2,6 @@ import styles from './landing.module.scss';
 import { ButtonWithIcon } from '@/shared/ui';
 import { useRef, useState } from 'react';
 import { ArrowIcon } from '@/icons/arrow-icon';
-import { HomeIcon } from '@/icons/home-icon';
-import { NavLink } from 'react-router-dom';
-import { ROUTES } from '@/shared/services/routes';
 import { Card } from './components/card';
 
 export const LandingPage = () => {
@@ -19,13 +16,7 @@ export const LandingPage = () => {
 
   return (
     <div className={styles.landing}>
-      <header>
-        <h1 className={styles.visuallyHidden}></h1>
-        <NavLink to={ROUTES.MAIN.getLink()} className={styles.homeIcon}>
-          <HomeIcon />
-        </NavLink>
-      </header>
-
+      <h1 className={styles.visuallyHidden}>Страница лендинга</h1>
       <section className={styles.landingSection}>
         <h2 className={styles.sectionTitle}>
           Интересные факты про эту страницу
