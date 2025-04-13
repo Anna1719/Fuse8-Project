@@ -20,7 +20,7 @@ export const useDeleteArticle = () => {
 
       return { previousArticles };
     },
-    onError: (err, id, context) => {
+    onError: (_err, _id, context) => {
       queryClient.setQueryData(['articles'], context?.previousArticles);
     },
     onSettled: () => {
