@@ -18,6 +18,8 @@ export const Header = () => {
     ROUTES.POST,
     ROUTES.LANDING,
     ROUTES.NAVIGATION,
+    ROUTES.ARTICLES,
+    ROUTES.CREATE_ARTICLE,
   ] as const;
 
   return (

@@ -1,11 +1,18 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { ROUTES } from '@/shared/services/routes';
 import { MainLayout } from '@/layouts';
-import { HomePage, RandomPostPage, LandingPage, NavigationPage } from '@/pages';
+import {
+  HomePage,
+  RandomPostPage,
+  LandingPage,
+  NavigationPage,
+  ArticleListPage,
+  CreateArticlePage,
+} from '@/pages';
 
 export const routes = [
   {
-    path: ROUTES.MAIN.getLink(),
+    path: ROUTES.MAIN.pathname,
     element: <MainLayout />,
     children: [
       {
@@ -13,16 +20,24 @@ export const routes = [
         index: true,
       },
       {
-        path: ROUTES.POST.getLink(),
+        path: ROUTES.POST.pathname,
         element: <RandomPostPage />,
       },
       {
-        path: ROUTES.LANDING.getLink(),
+        path: ROUTES.LANDING.pathname,
         element: <LandingPage />,
       },
       {
-        path: ROUTES.NAVIGATION.getLink(),
+        path: ROUTES.NAVIGATION.pathname,
         element: <NavigationPage />,
+      },
+      {
+        path: ROUTES.ARTICLES.pathname,
+        element: <ArticleListPage />,
+      },
+      {
+        path: ROUTES.CREATE_ARTICLE.pathname,
+        element: <CreateArticlePage />,
       },
       {
         path: '*',

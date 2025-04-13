@@ -25,4 +25,16 @@ export const ROUTES = {
     getLink: () => '/navigation',
     text: 'Навигация',
   },
+  ARTICLES: {
+    name: 'articles',
+    pathname: '/articles',
+    getLink: () => '/articles',
+    text: 'Статьи',
+  },
+  CREATE_ARTICLE: {
+    name: 'create_article',
+    pathname: '/articles/create',
+    getLink: () => '/articles/create',
+    text: 'Создать статью',
+  },
 } satisfies Record<string, Route>;
