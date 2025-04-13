@@ -24,34 +24,21 @@
   margin: 0;
 }
 
-.createButton {
+.createLink {
   max-width: 300px;
-  background-color: var(--button-base-color);
-  color: var(--background-light);
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 4px;
-  text-decoration: none;
   display: inline-block;
+  padding: 10px 20px;
+  color: var(--links-color);
+  text-decoration: none;
+  font-size: 20px;
+  background-color: var(--background-light);
+  border: 2px solid var(--button-base-color);
 
   &:hover {
-    background-color: var(--button-hover-color);
+    background-color: var(--button-base-color);
+    border-color: var(--button-hover-color);
+    color: var(--background-light);
   }
-}
-
-.loading {
-  color: var(--loading-color);
-  text-align: center;
-  padding: 40px;
-  font-size: 1.2rem;
-}
-
-.error {
-  color: var(--error-color);
-  text-align: center;
-  padding: 40px;
-  font-size: 1.2rem;
 }
 
 .articlesList {

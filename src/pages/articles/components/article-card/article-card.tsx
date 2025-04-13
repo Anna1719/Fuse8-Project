@@ -2,16 +2,16 @@ import { Article } from '@/utils/article-types';
 import styles from './article-card.module.scss';
 import { ButtonWithIcon } from '@/shared/ui';
 
-interface ArticleCardProps {
+type ArticleCardProps = {
   article: Article;
-  onDelete: (id: string) => void;
-  isDeleting?: boolean;
-}
+  onDelete: () => void;
+  disabled?: boolean;
+};
 
 export const ArticleCard = ({
   article,
   onDelete,
-  isDeleting,
+  disabled = false,
 }: ArticleCardProps) => {
   return (
     <div className={styles.card}>
@@ -29,12 +29,8 @@ export const ArticleCard = ({
           </>
         )}
       </div>
-      <ButtonWithIcon
-        className={styles.card__button}
-        onClick={() => onDelete(article.id)}
-        disabled={isDeleting}
-      >
-        Delete
+      <ButtonWithIcon onClick={onDelete} disabled={disabled}>
+        Удалить
       </ButtonWithIcon>
     </div>
   );

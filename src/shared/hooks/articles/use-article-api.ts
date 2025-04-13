@@ -9,16 +9,6 @@ export const useArticles = () => {
   });
 };
 
-export const useDeleteArticle = () => {
-  const queryClient = useQueryClient();
-  return useMutation({
-    mutationFn: (id: string) => articleAPI.deleteArticle(id),
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['articles'] });
-    },
-  });
-};
-
 export const useCreateArticle = () => {
   const queryClient = useQueryClient();
   return useMutation({

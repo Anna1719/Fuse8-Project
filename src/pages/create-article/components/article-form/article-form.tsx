@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import {
   articleFormSchema,
@@ -18,6 +17,7 @@ export const ArticleForm = ({ onSubmit, isSubmitting }: ArticleFormProps) => {
     register,
     handleSubmit,
     watch,
+    control,
     formState: { errors },
     setValue,
   } = useForm<ArticleFormValues>({
@@ -61,18 +61,19 @@ export const ArticleForm = ({ onSubmit, isSubmitting }: ArticleFormProps) => {
 
       {contentType === 'published' && (
         <>
-          <div>
-            <label>Description</label>
-            <textarea
-              {...register('content.description' as const)}
-              aria-invalid={!!(errors.content as any)?.description}
-            />
-            {(errors.content as any)?.description?.message && (
-              <p className={styles.error}>
-                {(errors.content as any).description.message}
-              </p>
+          <Controller
+            control={control}
+            name="content.description"
+            render={({ field, fieldState }) => (
+              <div>
+                <label>Description</label>
+                <textarea {...field} aria-invalid={!!fieldState.error} />
+                {fieldState.error && (
+                  <p className={styles.error}>{fieldState.error.message}</p>
+                )}
+              </div>
             )}
-          </div>
+          />
 
           <div className={styles.checkboxContainer}>
             <input
